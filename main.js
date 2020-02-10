@@ -77,10 +77,20 @@ function deleteLetters(letter,word) {
     }
     return withOutLetter;
 }
+
+//Task 10
+function isPolindrome(newWord) {
+    let check = newWord.toLowerCase() == newWord.toLowerCase().split().reverse().join();
+    return check;
+}
+
+
+
 document.writeln(`Функция №1: ${getMaxDigit("1234567256")}`,"<br \/>")
 document.writeln(`Функция №2: ${pow(3,4)}`,"<br \/>")
 document.writeln(`Функция №3: ${correctName("iVaN")}`,"<br \/>")
 document.writeln(`Функция №4: ${salary(1000)}`,"<br \/>")
 document.writeln(`Функция №6: ${countLetter("a","alphabetatatatat")}`,"<br \/>")
 document.writeln(`Функция №7: ${convertCurrency("2500uah")}`,"<br \/>")
-document.writeln(`Функция №9: ${deleteLetters("b","blablalblalla")}`)
+document.writeln(`Функция №9: ${deleteLetters("b","blablalblalla")}`,"<br \/>")
+document.writeln(`Функция №10: ${isPolindrome("Аргентина манит негра")}`)
