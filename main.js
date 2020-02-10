@@ -85,6 +85,21 @@ function isPolindrome(newWord) {
 }
 
 
+//Task 11
+
+function deleteDuplicateLetter(sentence) {
+    let result = "";
+    for (let i = 0; i < sentence.length; i++) {
+        if (result.toLowerCase().indexOf(sentence[i])<0) {
+            result = result+sentence[i];
+        } else {
+            continue;
+        }
+
+    }
+    return result;
+}
+
 
 document.writeln(`Функция №1: ${getMaxDigit("1234567256")}`,"<br \/>")
 document.writeln(`Функция №2: ${pow(3,4)}`,"<br \/>")
@@ -93,4 +108,5 @@ document.writeln(`Функция №4: ${salary(1000)}`,"<br \/>")
 document.writeln(`Функция №6: ${countLetter("a","alphabetatatatat")}`,"<br \/>")
 document.writeln(`Функция №7: ${convertCurrency("2500uah")}`,"<br \/>")
 document.writeln(`Функция №9: ${deleteLetters("b","blablalblalla")}`,"<br \/>")
-document.writeln(`Функция №10: ${isPolindrome("Аргентина манит негра")}`)
+document.writeln(`Функция №10: ${isPolindrome("Аргентина манит негра")}`,"<br \/>")
+document.writeln(`Функция №11: ${deleteDuplicateLetter(("Бисквит был очень нежный"))}`)
