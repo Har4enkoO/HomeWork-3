@@ -1,0 +1,4 @@
+{
+  "prettier.htmlWhitespaceSensitivity": "strict",
+  "prettier.trailingComma": "all"
+}

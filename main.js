@@ -13,10 +13,10 @@ function getMaxDigit(n) {
 
 
 // Task #2
-function pow(a,b) {
+function pow(a, b) {
     let c = a;
     for (let i = 1; i < b; i++) {
-        c*=a;
+        c *= a;
     }
     return c;
 }
@@ -25,7 +25,7 @@ function pow(a,b) {
 
 // Task #3
 function correctName(str) {
-    correct = str[0].toUpperCase()+str.slice(1).toLowerCase();
+    correct = str[0].toUpperCase() + str.slice(1).toLowerCase();
     return correct;
 }
 
@@ -33,18 +33,18 @@ function correctName(str) {
 
 // Task #4
 function salary(x) {
-    return x*0.805;
+    return x * 0.805;
 }
 
 
 
 // Task #6
 
-function countLetter(letter,word) {
+function countLetter(letter, word) {
     let count = 0;
-    for (let i = 0; i < (word.length-1); i++) {
+    for (let i = 0; i < (word.length - 1); i++) {
         if (word[i] == letter) {
-            count+=1;
+            count += 1;
         } else {
             continue;
         }
@@ -55,23 +55,23 @@ function countLetter(letter,word) {
 
 // Task #7
 function convertCurrency(money) {
-    if (money.toUpperCase().indexOf("UAH")>=0) {
-        return ((+(money.toUpperCase().replace("UAH","")))/25);
-    } else if (money.toUpperCase().indexOf("$")>=0) {
-        return ((+(money.replace("$","")))*25)
+    if (money.toUpperCase().indexOf("UAH") >= 0) {
+        return ((+(money.toUpperCase().replace("UAH", ""))) / 25);
+    } else if (money.toUpperCase().indexOf("$") >= 0) {
+        return ((+(money.replace("$", ""))) * 25)
     } else {
         alert("Wrong currency!!");
     }
 }
 
 // Task #9
-function deleteLetters(letter,word) {
-    let withOutLetter="";
-    for (let i = 0; i < (word.length) ; i++) {
+function deleteLetters(letter, word) {
+    let withOutLetter = "";
+    for (let i = 0; i < (word.length); i++) {
         if (word[i] == letter) {
             continue;
-        }else {
-            withOutLetter+=word[i];
+        } else {
+            withOutLetter += word[i];
         }
 
     }
@@ -90,23 +90,27 @@ function isPolindrome(newWord) {
 function deleteDuplicateLetter(sentence) {
     let result = "";
     for (let i = 0; i < sentence.length; i++) {
-        if (result.toLowerCase().indexOf(sentence[i])<0) {
-            result = result+sentence[i];
-        } else {
-            continue;
+        count = 0;
+        for (let j = 0; j < sentence.length; j++) {
+            if(sentence[i].toLowerCase() ===sentence[j].toLowerCase()) {
+                count+=1;
+            }
         }
-
+        if(count < 2) {
+            result += sentence[i];
+        }
     }
     return result;
 }
 
 
-document.writeln(`Функция №1: ${getMaxDigit("1234567256")}`,"<br \/>")
-document.writeln(`Функция №2: ${pow(3,4)}`,"<br \/>")
-document.writeln(`Функция №3: ${correctName("iVaN")}`,"<br \/>")
-document.writeln(`Функция №4: ${salary(1000)}`,"<br \/>")
-document.writeln(`Функция №6: ${countLetter("a","alphabetatatatat")}`,"<br \/>")
-document.writeln(`Функция №7: ${convertCurrency("2500uah")}`,"<br \/>")
-document.writeln(`Функция №9: ${deleteLetters("b","blablalblalla")}`,"<br \/>")
-document.writeln(`Функция №10: ${isPolindrome("Аргентина манит негра")}`,"<br \/>")
+document.writeln(`Функция №1: ${getMaxDigit("1234567256")}`, "<br \/>")
+document.writeln(`Функция №2: ${pow(3,4)}`, "<br \/>")
+document.writeln(`Функция №3: ${correctName("iVaN")}`, "<br \/>")
+document.writeln(`Функция №4: ${salary(1000)}`, "<br \/>")
+document.writeln(`Функция №6: ${countLetter("a","alphabetatatatat")}`, "<br \/>")
+document.writeln(`Функция №7: ${convertCurrency("2500uah")}`, "<br \/>")
+document.writeln(`Функция №9: ${deleteLetters("b","blablalblalla")}`, "<br \/>")
+document.writeln(`Функция №10: ${isPolindrome("Аргентина манит негра")}`, "<br \/>")
 document.writeln(`Функция №11: ${deleteDuplicateLetter(("Бисквит был очень нежный"))}`)
+
